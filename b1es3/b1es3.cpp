@@ -1,21 +1,21 @@
 //
-//  main.cpp
+//  b1es3.cpp
 //  b1es3
 //
-//  Created by Roberto Ceola on 24/10/2020.
-//Una parola, frase o numero palindromo ha la proprietà che può essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo è palindromo o meno.
-//(extra: il numero in ingresso non ha lunghezza 5 ma variabile)
+//  Created by Roberto Ceola on 27/10/2020.
+//
 
+#include <stdio.h>
 #include <iostream>
 using namespace std;
 
 int pos(int n, int i){      //restituisce il numero situato nella posizione indicata(i)
     int rest;
-    int parz;
+    int parz=n;
     int j=0;
     while(j<i){
-        parz=n;
         rest=parz%10;
+        parz=parz/10;
         j++;
     }
     return rest;
@@ -36,14 +36,15 @@ int pal(int n){
 
 int palq(int n){            //palindormo di lunghezza qualsiasi (non per forza 5)
     bool esito;
-    int parz, nCifre;
+    int parz=n, nCifre;
+    const int NMax=10;
+    int a[NMax];
     int i=0;
     do {
-            parz=n/10;
+            parz=parz/10;
             i++;
     } while (parz!=0);
     nCifre=i;
-    int a[nCifre];
     for (int i=1; i<=nCifre; i++){
         a[i] = 0;
     }
@@ -51,13 +52,12 @@ int palq(int n){            //palindormo di lunghezza qualsiasi (non per forza 5
         a[i]= pos(n, i);
     }
     if (nCifre%2==0){
-        int verPv=true, verPf=true;
+        bool verPv=true, verPf=true;
         for(int i=1;i<=nCifre/2;i++){
             if(a[i]==a[nCifre +1 -i])
                 verPv = true;
-            else{
-                verPf = true;
-            }
+            else
+                verPf = false;
         }
         esito= verPv && verPf;
     }

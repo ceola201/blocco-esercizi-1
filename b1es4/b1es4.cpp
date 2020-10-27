@@ -1,10 +1,11 @@
 //
-//  main.cpp
+//  b1es4.cpp
 //  b1es4
 //
-//  Created by Roberto Ceola on 24/10/2020.
-//SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop è infinito. Cosa succede e perché?
+//  Created by Roberto Ceola on 27/10/2020.
+//
 
+#include "b1es4.hpp"
 #include <iostream>
 using namespace std;
 int main(int argc, const char * argv[]) {
