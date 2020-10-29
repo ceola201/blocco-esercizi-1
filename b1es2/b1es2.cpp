@@ -1,10 +1,9 @@
 //
-//  main.cpp
+//  b1es2.cpp
 //  b1es2
 //
-//  Created by Roberto Ceola on 24/10/2020.
-// sup che dato un intero e un numero indice, individua la cifra alla posizione indice del primo numer inserito. esempio 39842, indice 2 (decine) = 4
-//(per scomporre il numero in cifre usare l'operatore divisione e resto con le potenze di 10.)
+//  Created by Roberto Ceola on 29/10/2020.
+//
 
 #include <iostream>
 using namespace std;

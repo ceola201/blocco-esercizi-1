@@ -1,8 +1,9 @@
 //
-//  main.cpp
+//  b1es1.cpp
 //  b1es1
 //
-//  Created by Roberto Ceola on 24/10/2020.
+//  created by Roberto Ceola on 29/10/2020.
+//
 // SUP che si fa dare due numeri interi x e y e calcola x^y. Fare due versioni, una che per il loop interno usa {for}, l'altra che usa {while}. Non usare {pow()}, questo perché se andate a leggere la documentazione, vedrete che prende in ingresso due {double}, significa quindi che al suo interno non compie un elevamento a potenza tra interi, ma tra numeri reali. Pur permettendoci di ottenere lo stesso risultato, questo implica che l'esecuzione sarà ben più lenta e inoltre potremmo imbatterci in errori numerici.
 
 #include <iostream>
@@ -33,3 +34,4 @@ int main(int argc, const char * argv[]) {
     cout<< "il risultato è: "<< pw(x, y)<<endl;
     return 0;
 }
+
